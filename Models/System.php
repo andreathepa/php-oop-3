@@ -2,20 +2,18 @@
 
     class System {
 
-        public $ringtone;
 
-        private $sender;
+        protected $sender;
 
-        private $receiver;
+        protected $receiver;
 
-        private $object;
+        protected $object;
 
-        private $content;
+        protected $content;
 
 
-        function __construct(String $ringtone, String $sender, String $receiver, String $object, String $content){
+        public function __construct(String $sender, String $receiver, String $object, String $content){
             
-            $this->ringtone = $ringtone = true;
             $this->sender = $sender;
             $this->receiver = $receiver;
             $this->object = $object;
@@ -23,9 +21,6 @@
 
         }
 
-        public function setRingtone($ringtone){
-            return $this->ringtone = $ringtone; 
-        }
 
         public function GetSender(){
             return $this->sender; 
@@ -42,28 +37,6 @@
         public function GetContent(){
             return $this->content; 
         }
-
-
-        public function GetMessReaded(){
-            return $this->mess_readed; 
-        }
-
-        public function GetMessAccepted(){
-            return $this->mess_accepted; 
-        }
-
-        public function GetNotificaInvio(){
-            return $this->notificaInvio; 
-        }
-
-        public function GetAllegato(){
-            return $this->allegato; 
-        }
-
-        public function GetIcon(){
-            return $this->icon; 
-        }
-
 
 
     }

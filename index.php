@@ -4,13 +4,21 @@
     require_once __DIR__."/Models/Email.php";
     require_once __DIR__."/Models/Message.php";
     require_once __DIR__."/Models/Notification.php";
-
-    
-    $email_1 = new Email ('Drin', 'Pippo', 'Paperino', 'Benvenuto', 'Benvenuto a Topolinia', true, 'ciao', 'treno', 'wela', 'palla');
+    require_once __DIR__."/Models/Database.php";
 
     
 
+
+
     
+    // $email_1 = new Email ('Drin', 'Pippo', 'Paperino', 'Benvenuto', 'Benvenuto a Topolinia', 'C:/Documents/file.txt', 'ciao', 'treno');
+    // $email_1->setAttachment('C:/Documents/file.txt');
+    // $email_1->setAttachment('C:/Documents/patente.pdf');
+    // $email_1->stampa();
+    
+
+    // die;
+
 
 
     
@@ -28,16 +36,29 @@
         <title>Php OOP 3</title>
     </head>
     <body>
+
+        <header>
+            <div class="container d-flex justify-content-center align-items-center mt-5">
+                <h1>Email OOP 3</h1>
+            </div>
+        </header>
         
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="content">
-                    <?php echo $email->GetRingtone() ?>
+        <div class="container">
+            <div class="row">
+                <?php foreach($emails as $email){?>
+                
+                <div class="col-12">
+                    <div class="content card m-3 p-3">
+                        <div>Inviato da: <?php echo $email->GetSender() ?></div>
+                        <div>A: <?php echo $email->GetReceiver() ?></div>
+                        <div>Oggetto: <?php echo $email->GetObject() ?></div>
+                        <div>Contenuto: <?php echo $email->GetContent() ?></div>
+
+                    </div>
                 </div>
+                <?php }?>
             </div>
         </div>
-    </div>
         
     </body>
 </html>
