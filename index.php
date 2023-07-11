@@ -1,26 +1,16 @@
 <?php
 
-    require_once __DIR__."/Models/Product.php";
-    require_once __DIR__."/Models/Food.php";
-    require_once __DIR__."/Models/Games.php";
-    require_once __DIR__."/Models/Utilities.php";
+    require_once __DIR__."/Models/System.php";
+    require_once __DIR__."/Models/Email.php";
+    require_once __DIR__."/Models/Message.php";
+    require_once __DIR__."/Models/Notification.php";
 
-    // $food_1 = new Food ('https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Royal Canin Mini Adult', 'Euro 43,99','Dog', '545', 'prosciutto, riso');
+    
+    $email_1 = new Email ('Drin', 'Pippo', 'Paperino', 'Benvenuto', 'Benvenuto a Topolinia', true, 'ciao', 'treno', 'wela', 'palla');
 
-    // $food_2 = new Food ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Almo Nature Holistic Maintenance Medium Large', 'Euro 44,99','Dog','600', 'manzo, cereali');
+    
 
-    // $food_3 = new Food ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Almo Nature Cat Daily Lattina', 'Euro 34,99','Cat','400', 'tonno, pollo, prosciutto');
-
-    // $food_4 = new Food ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Mangime per pesci Guppi', 'Euro 2,99','Fish','30', 'Pesci, alghe, cereali');
-
-    // $Utilities_1 = new Utilities ('https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Voliera Wilma in Legno', 'Euro 184,99','Bird', 'Wood', '120 cm x 200 cm');
-
-    // $Utilities_2 = new Utilities ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Cartucce filtranti per fitro pesci', 'Euro 2,99','Fish','Materiale espanso', 'ND');
-
-    // $Games_1 = new Games ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Kong Classic', 'Euro 13,99','Dog','Galleggia e rimbalza', '8,5 cm x 10cm');
-
-    // $Games_2 = new Games ('https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpghttps://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', 'Topini', 'Euro 4,99','Cat','Morbido con codina', 'Pesci, alghe, cereali');
-
+    
 
 
     
@@ -39,15 +29,15 @@
     </head>
     <body>
         
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content">
-
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <?php echo $email->GetRingtone() ?>
                 </div>
             </div>
         </div>
-
+    </div>
+        
     </body>
 </html>
